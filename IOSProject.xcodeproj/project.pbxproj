@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4577786F21B6E62D0014D1B0 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4577786E21B6E62D0014D1B0 /* MapViewController.swift */; };
+		4577787121B6E65C0014D1B0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4577787021B6E65C0014D1B0 /* MainViewController.swift */; };
 		D61F7DE121ADBCE800708585 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61F7DE021ADBCE800708585 /* AppDelegate.swift */; };
 		D61F7DE321ADBCE800708585 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61F7DE221ADBCE800708585 /* ViewController.swift */; };
 		D61F7DE621ADBCE800708585 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D61F7DE421ADBCE800708585 /* Main.storyboard */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4577786E21B6E62D0014D1B0 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		4577787021B6E65C0014D1B0 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		D61F7DDD21ADBCE800708585 /* IOSProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOSProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D61F7DE021ADBCE800708585 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D61F7DE221ADBCE800708585 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +106,8 @@
 				D61F7DE021ADBCE800708585 /* AppDelegate.swift */,
 				D61F7DE221ADBCE800708585 /* ViewController.swift */,
 				D61F7DE421ADBCE800708585 /* Main.storyboard */,
+				4577787021B6E65C0014D1B0 /* MainViewController.swift */,
+				4577786E21B6E62D0014D1B0 /* MapViewController.swift */,
 				D61F7DEA21ADBCE900708585 /* Assets.xcassets */,
 				D61F7DEC21ADBCE900708585 /* LaunchScreen.storyboard */,
 				D61F7DEF21ADBCE900708585 /* Info.plist */,
@@ -262,6 +268,8 @@
 				D61F7DE321ADBCE800708585 /* ViewController.swift in Sources */,
 				D61F7DE921ADBCE800708585 /* IOSProject.xcdatamodeld in Sources */,
 				D61F7DE121ADBCE800708585 /* AppDelegate.swift in Sources */,
+				4577786F21B6E62D0014D1B0 /* MapViewController.swift in Sources */,
+				4577787121B6E65C0014D1B0 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
