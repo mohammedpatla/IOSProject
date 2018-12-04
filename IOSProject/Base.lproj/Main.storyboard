@@ -191,9 +191,13 @@
                     <navigationItem key="navigationItem" title="Menu" id="ToK-EW-lPM"/>
                     <connections>
                         <outlet property="bagButton" destination="Poz-Ip-5L3" id="4hK-eq-khv"/>
+                        <outlet property="bagHint" destination="sCU-xS-KdF" id="b7y-n0-XLC"/>
                         <outlet property="exitButton" destination="IZZ-AQ-1PA" id="pNd-jh-spN"/>
+                        <outlet property="exitHint" destination="XTa-tN-fJd" id="7Dp-ma-BNd"/>
                         <outlet property="partyButton" destination="bEW-kb-mxk" id="eCD-LF-W6s"/>
+                        <outlet property="partyHint" destination="4tN-Yo-YwO" id="JJg-vP-Pdb"/>
                         <outlet property="saveButton" destination="Ojs-vB-XLV" id="XsP-Z9-01E"/>
+                        <outlet property="saveHint" destination="Y44-V7-Cns" id="rYx-Sz-F02"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Guz-Uj-fAU" userLabel="First Responder" sceneMemberID="firstResponder"/>
