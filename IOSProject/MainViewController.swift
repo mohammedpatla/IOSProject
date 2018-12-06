@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class MainViewController: UIViewController {
 
@@ -20,20 +21,25 @@ class MainViewController: UIViewController {
     @IBOutlet var saveHint: UILongPressGestureRecognizer!
     @IBOutlet var exitHint: UILongPressGestureRecognizer!
     
+    var jsonResult: AnyObject? = nil
+    var pokemon: Pokemon!
+    
+    var context: NSManagedObjectContext!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        let url = URL(string: "https://pokeapi.co/api/v2/pokemon")
+        let url = URL(string: "https://pokeapi.co/api/v2/pokemon/7")
         let task = URLSession.shared.dataTask(with: url!){(data, response, error) in
             if error != nil{
                 print(error!)
             }else{
                 if let urlContent = data{
                     do{
-                        let jsonResult = try JSONSerialization.jsonObject(with: urlContent, options: JSONSerialization.ReadingOptions.mutableContainers) as AnyObject
-                        print(jsonResult)
-                        print("You picked \(jsonResult["results"]!)")
+                        self.jsonResult = try JSONSerialization.jsonObject(with: urlContent, options: JSONSerialization.ReadingOptions.mutableContainers) as AnyObject
+                        //print(jsonResult)
+                        print("You picked \(self.jsonResult!["name"]!)")
                     }
                     catch{
                         print("Something failed")
@@ -42,6 +48,10 @@ class MainViewController: UIViewController {
             }
         }
         task.resume()
+        
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+        context = appDelegate.persistentContainer.viewContext
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -59,6 +69,19 @@ class MainViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        // tell swift where to send the data
+        let partyVal = segue.destination as! PartyViewController
+        partyVal.pokeName = "wf"
+        // send the data
+        //partyVal.pokeName = jsonResult!["name"]! as! String
+        
+        
+    }
+    
+    
 
     @IBAction func partyPressed(_ sender: Any) {
         partyButton.isHidden = false
