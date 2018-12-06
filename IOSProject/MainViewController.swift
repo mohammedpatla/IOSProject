@@ -24,6 +24,24 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        let url = URL(string: "https://pokeapi.co/api/v2/pokemon")
+        let task = URLSession.shared.dataTask(with: url!){(data, response, error) in
+            if error != nil{
+                print(error!)
+            }else{
+                if let urlContent = data{
+                    do{
+                        let jsonResult = try JSONSerialization.jsonObject(with: urlContent, options: JSONSerialization.ReadingOptions.mutableContainers) as AnyObject
+                        print(jsonResult)
+                        print("You picked \(jsonResult["results"]!)")
+                    }
+                    catch{
+                        print("Something failed")
+                    }
+                }
+            }
+        }
+        task.resume()
     }
 
     override func didReceiveMemoryWarning() {
