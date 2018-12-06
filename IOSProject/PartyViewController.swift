@@ -12,13 +12,17 @@ import CoreData
 class PartyViewController: UITableViewController {
     
     var pokeName: String = ""
+    var pokeItems: [String] = []
     var items: [Pokemon] = []
 
+    @IBOutlet weak var nameLabel: UILabel!
+    
     var context: NSManagedObjectContext!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         print(pokeName)
+        pokeItems.append(pokeName)
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -73,13 +77,14 @@ class PartyViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return items.count
+        return pokeItems.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "pokeCell", for: indexPath)
-        cell.textLabel?.text = items[indexPath.row].name
+        cell.imageView?.image = #imageLiteral(resourceName: "squirtle")
+        //cell.textLabel?.text = pokeItems[indexPath.row]
         // Configure the cell...
 
         return cell

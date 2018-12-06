@@ -125,7 +125,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Guz-Uj-fAU" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="wtr-EQ-TIp">
                     <connections>
-                        <segue destination="wg5-Tg-cpL" kind="show" id="5SH-PY-ozf"/>
+                        <segue destination="wg5-Tg-cpL" kind="show" identifier="mapIdentifier" id="5SH-PY-ozf"/>
                     </connections>
                 </tapGestureRecognizer>
                 <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" numberOfTapsRequired="1" id="4tN-Yo-YwO">
@@ -150,7 +150,7 @@
                 </pongPressGestureRecognizer>
                 <tapGestureRecognizer id="6Rt-4O-Sbo">
                     <connections>
-                        <segue destination="TiG-4F-qhD" kind="show" id="UJ8-eV-N8z"/>
+                        <segue destination="TiG-4F-qhD" kind="show" identifier="partyIdentifier" id="UJ8-eV-N8z"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -166,20 +166,17 @@
                         <color key="backgroundColor" red="0.28235294119999998" green="0.6588235294" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="sectionIndexBackgroundColor" red="0.72156862745098038" green="0.15294117647058825" blue="0.12549019607843137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="pokeCell" id="7GR-Vm-rPt">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="pokeCell" id="7GR-Vm-rPt" customClass="CustomViewCell" customModule="IOSProject" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7GR-Vm-rPt" id="PG9-89-Dpy">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g6S-Pb-U44">
-                                            <rect key="frame" x="16" y="0.0" width="40" height="40"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgS-Fk-mNY">
                                             <rect key="frame" x="90" y="0.0" width="102" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <accessibility key="accessibilityConfiguration" identifier="Name"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
@@ -211,6 +208,10 @@
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ntw-HH-C9N">
+                                            <rect key="frame" x="24" y="4" width="35" height="35"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.28235294117647058" green="0.6588235294117647" blue="0.62745098039215685" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -221,6 +222,9 @@
                             <outlet property="delegate" destination="TiG-4F-qhD" id="udM-jV-MaH"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="nameLabel" destination="cgS-Fk-mNY" id="DdF-aj-Sj5"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nrf-bY-eYr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -230,11 +234,11 @@
         <scene sceneID="uOs-9N-3tt">
             <objects>
                 <viewController title="Map" id="wg5-Tg-cpL" customClass="MapViewController" customModule="IOSProject" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Klh-JA-Jka">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="Klh-JA-Jka">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsBuildings="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eLE-JK-sR4">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" mapType="standard" showsBuildings="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eLE-JK-sR4">
                                 <rect key="frame" x="30" y="134" width="314" height="407"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="451" id="RBT-l3-NRm"/>

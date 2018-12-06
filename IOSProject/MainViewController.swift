@@ -71,12 +71,16 @@ class MainViewController: UIViewController {
     */
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+        if segue.identifier == "partyIdentifier"{
         // tell swift where to send the data
         let partyVal = segue.destination as! PartyViewController
         partyVal.pokeName = "wf"
-        // send the data
         //partyVal.pokeName = jsonResult!["name"]! as! String
+        }
+        else if segue.identifier == "mapIdentifier"{
+            // Do map stuff
+            
+        }
         
         
     }
