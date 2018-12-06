@@ -159,7 +159,7 @@
         <!--Party-->
         <scene sceneID="KZf-uL-GUd">
             <objects>
-                <tableViewController title="Party" id="TiG-4F-qhD" customClass="PartyViewControllerTableViewController" customModule="IOSProject" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Party" id="TiG-4F-qhD" customClass="PartyViewController" customModule="IOSProject" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="tOy-bx-OYi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -190,11 +190,11 @@
         <scene sceneID="uOs-9N-3tt">
             <objects>
                 <viewController title="Map" id="wg5-Tg-cpL" customClass="MapViewController" customModule="IOSProject" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="Klh-JA-Jka">
+                    <view key="view" contentMode="scaleToFill" id="Klh-JA-Jka">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" mapType="standard" showsBuildings="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eLE-JK-sR4">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsBuildings="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eLE-JK-sR4">
                                 <rect key="frame" x="30" y="134" width="314" height="407"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="451" id="RBT-l3-NRm"/>
