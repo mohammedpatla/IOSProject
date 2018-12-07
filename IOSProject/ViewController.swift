@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import FirebaseAuth
 
 class ViewController: UIViewController {
 
@@ -16,6 +17,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
+    
 
     //MARK:first
 }

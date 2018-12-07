@@ -8,6 +8,14 @@ target 'IOSProject' do
   # Pods for IOSProject
   pod 'Alamofire', '~> 4.7'
   
+  # Pods for FirebaseExamples
+  pod 'Firebase/Core'
+  pod 'FirebaseUI'
+  pod 'Firebase/Firestore'
+  
+  # Pods for User interface of a chat app
+  pod 'MessageKit'
+  
   target 'IOSProjectTests' do
     inherit! :search_paths
     # Pods for testing
