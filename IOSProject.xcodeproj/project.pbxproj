@@ -12,13 +12,13 @@
 		4577786F21B6E62D0014D1B0 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4577786E21B6E62D0014D1B0 /* MapViewController.swift */; };
 		4577787121B6E65C0014D1B0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4577787021B6E65C0014D1B0 /* MainViewController.swift */; };
 		6E34CFC355E210B080A06B5F /* Pods_IOSProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5644F727C18AFB4F45A8095F /* Pods_IOSProjectTests.framework */; };
+		B8257D0921BB008D00154371 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B8257D0821BB008D00154371 /* GoogleService-Info.plist */; };
 		D61F7DE121ADBCE800708585 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61F7DE021ADBCE800708585 /* AppDelegate.swift */; };
 		D61F7DE321ADBCE800708585 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61F7DE221ADBCE800708585 /* ViewController.swift */; };
 		D61F7DE621ADBCE800708585 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D61F7DE421ADBCE800708585 /* Main.storyboard */; };
 		D61F7DE921ADBCE800708585 /* IOSProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D61F7DE721ADBCE800708585 /* IOSProject.xcdatamodeld */; };
 		D61F7DEB21ADBCE900708585 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D61F7DEA21ADBCE900708585 /* Assets.xcassets */; };
 		D61F7DEE21ADBCE900708585 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D61F7DEC21ADBCE900708585 /* LaunchScreen.storyboard */; };
-		D63EC52321B74915009623BA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D63EC52221B74915009623BA /* GoogleService-Info.plist */; };
 		D7759221203C1F0E24F3F280 /* Pods_IOSProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 508EBFD5FF0514D978DBBF58 /* Pods_IOSProjectUITests.framework */; };
 		F18CF83C6A711AD061A500D2 /* Pods_IOSProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF33A2B0AF4800E04F26EEFC /* Pods_IOSProject.framework */; };
 /* End PBXBuildFile section */
@@ -62,6 +62,7 @@
 		508EBFD5FF0514D978DBBF58 /* Pods_IOSProjectUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IOSProjectUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5644F727C18AFB4F45A8095F /* Pods_IOSProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IOSProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		640BD86FC99015BCE25265B2 /* Pods-IOSProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOSProjectTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IOSProjectTests/Pods-IOSProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B8257D0821BB008D00154371 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BDACE84A68D7832519214E1D /* Pods-IOSProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOSProjectTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-IOSProjectTests/Pods-IOSProjectTests.release.xcconfig"; sourceTree = "<group>"; };
 		BF33A2B0AF4800E04F26EEFC /* Pods_IOSProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IOSProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2F76D4BB076036EBE2CB7C1 /* Pods-IOSProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOSProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-IOSProject/Pods-IOSProject.release.xcconfig"; sourceTree = "<group>"; };
@@ -75,7 +76,6 @@
 		D61F7DEF21ADBCE900708585 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D61F7DF421ADBCEA00708585 /* IOSProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IOSProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D61F7DFF21ADBCEA00708585 /* IOSProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IOSProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D63EC52221B74915009623BA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Desktop/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EA8F84A4628F8B7581973829 /* Pods-IOSProjectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOSProjectUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-IOSProjectUITests/Pods-IOSProjectUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F7EDD7BBFF3CE61DD2CD65CD /* Pods-IOSProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOSProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IOSProject/Pods-IOSProject.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -141,7 +141,7 @@
 		D61F7DDF21ADBCE800708585 /* IOSProject */ = {
 			isa = PBXGroup;
 			children = (
-				D63EC52221B74915009623BA /* GoogleService-Info.plist */,
+				B8257D0821BB008D00154371 /* GoogleService-Info.plist */,
 				D61F7DE021ADBCE800708585 /* AppDelegate.swift */,
 				D61F7DE221ADBCE800708585 /* ViewController.swift */,
 				D61F7DE421ADBCE800708585 /* Main.storyboard */,
@@ -281,7 +281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D61F7DEE21ADBCE900708585 /* LaunchScreen.storyboard in Resources */,
-				D63EC52321B74915009623BA /* GoogleService-Info.plist in Resources */,
+				B8257D0921BB008D00154371 /* GoogleService-Info.plist in Resources */,
 				D61F7DEB21ADBCE900708585 /* Assets.xcassets in Resources */,
 				D61F7DE621ADBCE800708585 /* Main.storyboard in Resources */,
 			);
@@ -309,8 +309,6 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-IOSProject/Pods-IOSProject-resources.sh",
 				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseFirestore/gRPCCertificates-Firestore.bundle",
@@ -324,8 +322,6 @@
 				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterKitResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/gRPCCertificates-Firestore.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseAnonymousAuthUI.bundle",
