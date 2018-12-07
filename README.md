@@ -10,5 +10,7 @@ IOS FInal Project 2018.
 ## Firebase-Authentication
 
 # Starting the Project
-Launch IOSProject.xcworspace and run the code.
+- close xcode
+- go to your Project folder
+- Launch IOSProject.xcworspace and run the code.
 
