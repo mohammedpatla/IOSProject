@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aa4-TU-R0S">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -301,6 +301,9 @@
                                 <state key="normal" title="SIGN UP">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="onSignUpPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5z4-6v-Eki"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cVD-b9-dG6">
                                 <rect key="frame" x="89" y="520" width="195" height="36"/>
@@ -310,8 +313,11 @@
                                 <state key="normal" title="LOGIN">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="onLoginPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U6P-D0-rp6"/>
+                                </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Pokémon" translatesAutoresizingMaskIntoConstraints="NO" id="Er0-gB-Q3j">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="title" translatesAutoresizingMaskIntoConstraints="NO" id="Er0-gB-Q3j">
                                 <rect key="frame" x="20" y="29" width="333" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -322,14 +328,27 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ACY-Sw-RLH">
+                                <rect key="frame" x="165" y="594" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.72156862745098038" green="0.15294117647058825" blue="0.12549019607843137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="zHV-9G-85a" id="ids-NX-pL9"/>
+                        <outlet property="passwordTextField" destination="Ho2-qK-Dkc" id="Qu3-FX-mEv"/>
+                        <outlet property="statusMessage" destination="ACY-Sw-RLH" id="Afc-LR-aGn"/>
+                        <segue destination="aa4-TU-R0S" kind="show" identifier="segueA" id="uel-fJ-Rst"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="669.60000000000002" y="32.833583208395808"/>
+            <point key="canvasLocation" x="282" y="-663"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="HWa-gT-aul">
@@ -352,11 +371,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Pokémon" width="1200" height="442"/>
         <image name="bag" width="512" height="512"/>
-        <image name="exit" width="512" height="512"/>
+        <image name="exit" width="409.60000610351562" height="409.60000610351562"/>
         <image name="map" width="500" height="371"/>
-        <image name="party" width="512" height="512"/>
-        <image name="save" width="512" height="512"/>
+        <image name="party" width="409.60000610351562" height="409.60000610351562"/>
+        <image name="save" width="37.616325378417969" height="37.616325378417969"/>
+        <image name="title" width="1200" height="442"/>
     </resources>
 </document>

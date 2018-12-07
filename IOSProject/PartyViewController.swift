@@ -85,8 +85,8 @@ class PartyViewController: UITableViewController {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "CustomViewCell", for: indexPath)as? CustomViewCell  else {
             fatalError("The dequeued cell is not an instance of CustomViewCell.")
         }
-        let pokeRow = pokeItems[indexPath.row]
-        cell.pokemonName = pokeRow.name
+        //let pokeRow = pokeItems[indexPath.row]
+        //cell.pokemonName = pokeRow.name
         
         //cell.textLabel?.text = pokeItems[indexPath.row]
         // Configure the cell...
