@@ -10,6 +10,12 @@ import UIKit
 
 class CustomViewCell: UITableViewCell {
 
+    @IBOutlet weak var pokemonName: UILabel!
+    @IBOutlet weak var pokemonLevel: UILabel!
+    @IBOutlet weak var pokemonHp: UILabel!
+    @IBOutlet weak var pokemonBar: UIProgressView!
+    @IBOutlet weak var pokemonImg: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

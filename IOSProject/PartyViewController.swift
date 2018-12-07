@@ -82,8 +82,12 @@ class PartyViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "pokeCell", for: indexPath)
-        cell.imageView?.image = #imageLiteral(resourceName: "squirtle")
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "CustomViewCell", for: indexPath)as? CustomViewCell  else {
+            fatalError("The dequeued cell is not an instance of CustomViewCell.")
+        }
+        let pokeRow = pokeItems[indexPath.row]
+        cell.pokemonName = pokeRow.name
+        
         //cell.textLabel?.text = pokeItems[indexPath.row]
         // Configure the cell...
 

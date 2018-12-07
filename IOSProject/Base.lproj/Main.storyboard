@@ -166,7 +166,7 @@
                         <color key="backgroundColor" red="0.28235294119999998" green="0.6588235294" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="sectionIndexBackgroundColor" red="0.72156862745098038" green="0.15294117647058825" blue="0.12549019607843137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="pokeCell" id="7GR-Vm-rPt" customClass="CustomViewCell" customModule="IOSProject" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomViewCell" id="7GR-Vm-rPt" customClass="CustomViewCell" customModule="IOSProject" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7GR-Vm-rPt" id="PG9-89-Dpy">
@@ -215,6 +215,13 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.28235294117647058" green="0.6588235294117647" blue="0.62745098039215685" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <outlet property="pokemonBar" destination="4cH-8t-Ude" id="dgc-Il-OrT"/>
+                                    <outlet property="pokemonHp" destination="4hu-9K-MYu" id="8xY-Ur-eAN"/>
+                                    <outlet property="pokemonImg" destination="ntw-HH-C9N" id="V2W-XZ-6QM"/>
+                                    <outlet property="pokemonLevel" destination="di7-Gg-9ES" id="YPb-eW-odF"/>
+                                    <outlet property="pokemonName" destination="cgS-Fk-mNY" id="Goj-FO-xLd"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
