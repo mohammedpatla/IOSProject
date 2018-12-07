@@ -18,7 +18,7 @@
 		D61F7DEE21ADBCE900708585 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D61F7DEC21ADBCE900708585 /* LaunchScreen.storyboard */; };
 		D61F7DF921ADBCEA00708585 /* IOSProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61F7DF821ADBCEA00708585 /* IOSProjectTests.swift */; };
 		D61F7E0421ADBCEA00708585 /* IOSProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61F7E0321ADBCEA00708585 /* IOSProjectUITests.swift */; };
-		D6A6229121B73DC500937A43 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D6A6229021B73DC500937A43 /* GoogleService-Info.plist */; };
+		D63EC52321B74915009623BA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D63EC52221B74915009623BA /* GoogleService-Info.plist */; };
 		D7759221203C1F0E24F3F280 /* Pods_IOSProjectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 508EBFD5FF0514D978DBBF58 /* Pods_IOSProjectUITests.framework */; };
 		F18CF83C6A711AD061A500D2 /* Pods_IOSProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF33A2B0AF4800E04F26EEFC /* Pods_IOSProject.framework */; };
 /* End PBXBuildFile section */
@@ -77,7 +77,7 @@
 		D61F7DFF21ADBCEA00708585 /* IOSProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IOSProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D61F7E0321ADBCEA00708585 /* IOSProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOSProjectUITests.swift; sourceTree = "<group>"; };
 		D61F7E0521ADBCEA00708585 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D6A6229021B73DC500937A43 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D63EC52221B74915009623BA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Desktop/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EA8F84A4628F8B7581973829 /* Pods-IOSProjectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOSProjectUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-IOSProjectUITests/Pods-IOSProjectUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F7EDD7BBFF3CE61DD2CD65CD /* Pods-IOSProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOSProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IOSProject/Pods-IOSProject.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -145,7 +145,7 @@
 		D61F7DDF21ADBCE800708585 /* IOSProject */ = {
 			isa = PBXGroup;
 			children = (
-				D6A6229021B73DC500937A43 /* GoogleService-Info.plist */,
+				D63EC52221B74915009623BA /* GoogleService-Info.plist */,
 				D61F7DE021ADBCE800708585 /* AppDelegate.swift */,
 				D61F7DE221ADBCE800708585 /* ViewController.swift */,
 				D61F7DE421ADBCE800708585 /* Main.storyboard */,
@@ -300,7 +300,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D61F7DEE21ADBCE900708585 /* LaunchScreen.storyboard in Resources */,
-				D6A6229121B73DC500937A43 /* GoogleService-Info.plist in Resources */,
+				D63EC52321B74915009623BA /* GoogleService-Info.plist in Resources */,
 				D61F7DEB21ADBCE900708585 /* Assets.xcassets in Resources */,
 				D61F7DE621ADBCE800708585 /* Main.storyboard in Resources */,
 			);
