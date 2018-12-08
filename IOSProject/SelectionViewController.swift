@@ -20,7 +20,7 @@ class SelectionViewController: UIViewController {
     var indigo = UIColor(red: 110/255, green: 182/255, blue: 175/255, alpha: 1)
     var red = UIColor(red: 184/255, green: 39/255, blue: 32/255, alpha: 1)
     
-    var pokeSelectionVal = 4
+    var pokeSelectionVal = -1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,11 +36,14 @@ class SelectionViewController: UIViewController {
 
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let pokeVal = segue.destination as! MainViewController
-        pokeVal.pokemonValue = pokeSelectionVal
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        if pokeSelectionVal != -1 && segue.identifier == "segueA"{
+            let pokeVal = segue.destination as! MainViewController
+            pokeVal.pokemonValue = pokeSelectionVal
+        }
     }
-
+    
     // Actions for tapping the faces
     @IBAction func bulbTapped(_ sender: Any) {
         bulbImg.backgroundColor = indigo
