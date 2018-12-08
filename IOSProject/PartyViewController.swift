@@ -60,6 +60,10 @@ class PartyViewController: UITableViewController {
         
         
     }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 110
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -87,7 +91,7 @@ class PartyViewController: UITableViewController {
         let randomLevel = (arc4random() % 10) + 3
         let randomHp = (arc4random() % 100) + 50
         
-        //let pokeRow = pokeItems[indexPath.row]
+       // let pokeRow = pokeItems[indexPath.row]
         cell.pokemonName?.text = pokeName
         cell.pokemonImg?.image = #imageLiteral(resourceName: "squirtle")
         cell.pokemonLevel?.text = "Lvl: " + String(randomLevel)
