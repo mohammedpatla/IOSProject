@@ -20,6 +20,7 @@ class PartyViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print(pokeName)
+        tableView.alwaysBounceVertical = false
         pokeItems.append(pokeName)
 
         // Uncomment the following line to preserve selection between presentations
@@ -92,6 +93,11 @@ class PartyViewController: UITableViewController {
         let randomHp = (arc4random() % 100) + 50
         
        // let pokeRow = pokeItems[indexPath.row]
+        let myCustomSelectionColorView = UIView()
+        myCustomSelectionColorView.backgroundColor = UIColor(red: 110/255, green: 182/255, blue: 175/255, alpha: 0.7)
+        
+        // Dynamic Setting
+        cell.selectedBackgroundView = myCustomSelectionColorView
         cell.pokemonName?.text = pokeName
         cell.pokemonImg?.image = #imageLiteral(resourceName: "squirtle")
         cell.pokemonLevel?.text = "Lvl: " + String(randomLevel)

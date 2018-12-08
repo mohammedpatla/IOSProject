@@ -24,10 +24,14 @@ class MainViewController: UIViewController {
     var jsonResult: AnyObject? = nil
     var pokemon: Pokemon!
     
+    // Pokemon Value
+    var pokemonValue = -1
+    
     var context: NSManagedObjectContext!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("Poke value \(pokemonValue)")
 
         // Do any additional setup after loading the view.
         let url = URL(string: "https://pokeapi.co/api/v2/pokemon/7")
