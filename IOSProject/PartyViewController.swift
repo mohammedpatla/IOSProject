@@ -14,8 +14,6 @@ class PartyViewController: UITableViewController {
     var pokeName: String = ""
     var pokeItems: [String] = []
     var items: [Pokemon] = []
-
-    @IBOutlet weak var nameLabel: UILabel!
     
     var context: NSManagedObjectContext!
     
@@ -77,7 +75,8 @@ class PartyViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return pokeItems.count
+        //return pokeItems.count
+        return 6
     }
 
     
@@ -85,8 +84,15 @@ class PartyViewController: UITableViewController {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "CustomViewCell", for: indexPath)as? CustomViewCell  else {
             fatalError("The dequeued cell is not an instance of CustomViewCell.")
         }
+        let randomLevel = (arc4random() % 10) + 3
+        let randomHp = (arc4random() % 100) + 50
+        
         //let pokeRow = pokeItems[indexPath.row]
-        //cell.pokemonName = pokeRow.name
+        cell.pokemonName?.text = pokeName
+        cell.pokemonImg?.image = #imageLiteral(resourceName: "squirtle")
+        cell.pokemonLevel?.text = "Lvl: " + String(randomLevel)
+        cell.pokemonHp?.text = "\(String(randomHp))/\(String(randomHp))"
+        cell.pokemonBar?.setProgress(30, animated: true)
         
         //cell.textLabel?.text = pokeItems[indexPath.row]
         // Configure the cell...

@@ -74,7 +74,7 @@ class MainViewController: UIViewController {
         if segue.identifier == "partyIdentifier"{
         // tell swift where to send the data
         let partyVal = segue.destination as! PartyViewController
-        partyVal.pokeName = "wf"
+        partyVal.pokeName = "Squirtle"
         //partyVal.pokeName = jsonResult!["name"]! as! String
         }
         else if segue.identifier == "mapIdentifier"{
