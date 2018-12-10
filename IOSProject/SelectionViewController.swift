@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+import WebKit
 
 class SelectionViewController: UIViewController {
 
@@ -26,6 +28,13 @@ class SelectionViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        // Setup firestore variable
+        db = Firestore.firestore()
+        
+        // OPTIONAL:  Required when dealing with dates that are stored in Firestore
+        let settings = db.settings
+        settings.areTimestampsInSnapshotsEnabled = true
+        db.settings = settings
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,6 +46,8 @@ class SelectionViewController: UIViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     
+    @IBAction func onGoPressed(_ sender: Any) {
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         if pokeSelectionVal != -1 && segue.identifier == "segueA"{
             let pokeVal = segue.destination as! MainViewController

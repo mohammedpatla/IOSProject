@@ -52,6 +52,9 @@ class ViewController: UIViewController {
                 // - maybe ask them to fill in other forms?
                 // - show a tutorial?
                 
+                // 2. So send them to signupPage
+                self.performSegue(withIdentifier: "segueB", sender: nil)
+                
             }
             else {
                 // 1. Error when creating a user
