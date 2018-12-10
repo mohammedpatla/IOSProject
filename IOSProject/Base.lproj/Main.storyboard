@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WGx-W6-HhN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WGx-W6-HhN">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -481,7 +481,7 @@
                         <outlet property="passwordTextField" destination="Ho2-qK-Dkc" id="Qu3-FX-mEv"/>
                         <outlet property="statusMessage" destination="ACY-Sw-RLH" id="Afc-LR-aGn"/>
                         <segue destination="aa4-TU-R0S" kind="show" identifier="segueA" id="uel-fJ-Rst"/>
-                        <segue destination="WGx-W6-HhN" kind="show" id="xan-7L-Aew"/>
+                        <segue destination="WGx-W6-HhN" kind="show" identifier="segueB" id="xan-7L-Aew"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -611,13 +611,13 @@
     </scenes>
     <resources>
         <image name="bag" width="512" height="512"/>
-        <image name="bullbasaur" width="512" height="512"/>
-        <image name="charmander" width="512" height="512"/>
-        <image name="exit" width="512" height="512"/>
+        <image name="bullbasaur" width="102.40000152587891" height="102.40000152587891"/>
+        <image name="charmander" width="102.11634063720703" height="102.11634063720703"/>
+        <image name="exit" width="409.60000610351562" height="409.60000610351562"/>
         <image name="map" width="500" height="371"/>
-        <image name="party" width="512" height="512"/>
-        <image name="save" width="512" height="512"/>
-        <image name="squirtle" width="512" height="512"/>
+        <image name="party" width="409.60000610351562" height="409.60000610351562"/>
+        <image name="save" width="37.616325378417969" height="37.616325378417969"/>
+        <image name="squirtle" width="102.11634063720703" height="102.11634063720703"/>
         <image name="title" width="1200" height="442"/>
     </resources>
     <inferredMetricsTieBreakers>
