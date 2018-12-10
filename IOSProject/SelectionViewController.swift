@@ -8,7 +8,6 @@
 
 import UIKit
 import Firebase
-import WebKit
 import FirebaseAuth
 
 class SelectionViewController: UIViewController {
@@ -69,8 +68,8 @@ class SelectionViewController: UIViewController {
     
     @IBAction func onGoPressed(_ sender: Any) {
         
-        db.collection("userPokemons").document().setData([
-            "userID": String(userEmail),
+        db.collection("userPokemons").document(userEmail).setData([
+            //"userID": String(userEmail),
             "pokemonValue":pokeSelectionVal
             ])
         

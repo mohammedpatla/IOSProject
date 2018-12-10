@@ -41,7 +41,7 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //Get user Variable
+        //Get Current User
         let currentUser = Auth.auth().currentUser
         
         if (currentUser != nil) {
@@ -54,7 +54,7 @@ class MainViewController: UIViewController {
         // Setup firestore variable
         db = Firestore.firestore()
         
-        //Getting Data from Database
+        //Getting Data from Database for every user
         db.collection("userPokemons").getDocuments() {
             (querySnapshot, err) in
             
@@ -63,13 +63,22 @@ class MainViewController: UIViewController {
                 print("Error getting documents: \(err)")
             } else {
                 for document in querySnapshot!.documents {
-                    print("\(document.documentID) => \(document.data())")
-                    
+                    if(document.documentID == self.userEmail)
+                    {
+                        print("Got something!")
+                        print("\(document.documentID) => \(document.data())")
+                        //Assign pokevalue to this instance.
+                        // 1. Get one result from database
+                        let data = document;
+                        print(data["pokemonValue"])
+                        self.pokemonValue = data["pokemonValue"] as! Int
+                        print(self.pokemonValue)
+                    }
                 }
             }
         }
-        
-        print("Poke value \(pokemonValue)")
+
+        print("Poke value \(self.pokemonValue)")
 
         // Do any additional setup after loading the view.
         let url = URL(string: "https://pokeapi.co/api/v2/pokemon/7")
