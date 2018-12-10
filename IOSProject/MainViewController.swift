@@ -8,6 +8,9 @@
 
 import UIKit
 import CoreData
+import Firebase
+import FirebaseAuth
+import WebKit
 
 class MainViewController: UIViewController {
 
@@ -24,6 +27,13 @@ class MainViewController: UIViewController {
     var jsonResult: AnyObject? = nil
     var pokemon: Pokemon!
     
+    //Current user
+    var userEmail:String = ""
+    
+    // MARK: Initialize firestore variable
+    // ------------------------------------
+    var db:Firestore!
+    
     // Pokemon Value
     var pokemonValue = -1
     
@@ -31,6 +41,34 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //Get user Variable
+        let currentUser = Auth.auth().currentUser
+        
+        if (currentUser != nil) {
+            userEmail = currentUser!.email!;
+        }
+        else{
+            userEmail = "unassigned"
+        }
+        
+        // Setup firestore variable
+        db = Firestore.firestore()
+        
+        //Getting Data from Database
+        db.collection("userPokemons").getDocuments() {
+            (querySnapshot, err) in
+            
+            // MARK: FB - Boilerplate code to get data from Firestore
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+                    print("\(document.documentID) => \(document.data())")
+                    
+                }
+            }
+        }
+        
         print("Poke value \(pokemonValue)")
 
         // Do any additional setup after loading the view.
@@ -43,7 +81,8 @@ class MainViewController: UIViewController {
                     do{
                         self.jsonResult = try JSONSerialization.jsonObject(with: urlContent, options: JSONSerialization.ReadingOptions.mutableContainers) as AnyObject
                         //print(jsonResult)
-                        print("You picked \(self.jsonResult!["name"]!)")
+                        //commented out
+                        //print("You picked \(self.jsonResult!["name"]!)")
                     }
                     catch{
                         print("Something failed")

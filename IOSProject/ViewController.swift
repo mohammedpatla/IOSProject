@@ -51,9 +51,31 @@ class ViewController: UIViewController {
                 // - do you want to send them to the next page?
                 // - maybe ask them to fill in other forms?
                 // - show a tutorial?
+            
+                //Signin on Successful signup
+                Auth.auth().signIn(withEmail: email, password: password) {
+                    
+                    (user, error) in
+                    
+                    if (user != nil) {
+                        // 1. Found a user!
+                        print("User signed in! ")
+                        // 2. So send them to finishsignup
+                        self.performSegue(withIdentifier: "segueB", sender: nil)
+                    }
+                    else {
+                        // 1. A problem occured when looking up  the user
+                        // - doesn't meet password requirements
+                        // - user already exists
+                        print("ERROR!")
+                        print(error?.localizedDescription)
+                        
+                        // 2. Show the error in user interface
+                        self.statusMessage.text = error?.localizedDescription
+                    }
+                }
                 
-                // 2. So send them to signupPage
-                self.performSegue(withIdentifier: "segueB", sender: nil)
+                
                 
             }
             else {
