@@ -81,6 +81,9 @@
                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="9t6-bY-Inh" appends="YES" id="NDR-7d-b0s"/>
+                                </connections>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Choose an Option:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hNk-mz-N6F">
                                 <rect key="frame" x="30" y="91" width="314" height="59"/>
@@ -207,6 +210,11 @@
                 <tapGestureRecognizer id="6Rt-4O-Sbo">
                     <connections>
                         <segue destination="TiG-4F-qhD" kind="show" identifier="partyIdentifier" id="UJ8-eV-N8z"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="9t6-bY-Inh">
+                    <connections>
+                        <action selector="exitToLogin:" destination="2Eg-bc-0pq" id="zns-qI-sk0"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -374,7 +382,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="attackBtnPressed:" destination="wg5-Tg-cpL" eventType="touchUpInside" id="mNq-1n-VAv"/>
+                                    <action selector="attack1BtnPressed:" destination="wg5-Tg-cpL" eventType="touchUpInside" id="R65-sU-SVi"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lll-vI-VQN">
@@ -385,7 +393,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="attackBtnPressed:" destination="wg5-Tg-cpL" eventType="touchUpInside" id="L5d-sq-SUX"/>
+                                    <action selector="attack2BtnPressed:" destination="wg5-Tg-cpL" eventType="touchUpInside" id="if9-OM-CZl"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oRz-WD-tIO">
@@ -396,7 +404,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="attackBtnPressed:" destination="wg5-Tg-cpL" eventType="touchUpInside" id="N56-z0-I4A"/>
+                                    <action selector="attack4BtnPressed:" destination="wg5-Tg-cpL" eventType="touchUpInside" id="XtX-XO-s8U"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cn6-6z-MvV">
@@ -407,7 +415,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="attackBtnPressed:" destination="wg5-Tg-cpL" eventType="touchUpInside" id="WO6-cf-sn6"/>
+                                    <action selector="attack3BtnPressed:" destination="wg5-Tg-cpL" eventType="touchUpInside" id="SqK-aJ-Qkr"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lEf-Hp-Qs4">
@@ -450,7 +458,6 @@
                         <outlet property="userPokeHP" destination="ibd-R3-bqu" id="VTY-co-CM8"/>
                         <outlet property="userPokeImage" destination="SbF-hb-eWN" id="3rG-pC-4Aa"/>
                         <outlet property="userPokeName" destination="dtB-Ee-Z0R" id="IK5-7t-ahj"/>
-                        <segue destination="2Eg-bc-0pq" kind="show" identifier="runSegue" id="bZg-CN-Tfz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VKa-Wj-k7g" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -678,8 +685,7 @@
         <image name="title" width="1200" height="442"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="d0w-Mc-WGO"/>
-        <segue reference="LTx-oy-eSq"/>
-        <segue reference="bZg-CN-Tfz"/>
+        <segue reference="uel-fJ-Rst"/>
+        <segue reference="xrh-3Q-fCl"/>
     </inferredMetricsTieBreakers>
 </document>

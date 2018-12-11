@@ -169,7 +169,11 @@ class MainViewController: UIViewController {
         if(exitHint.state == .ended){
             exitButton.isHidden = true
         }
-        
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    //TODO: this doesn't work - talk to Alex
+    @IBAction func exitToLogin(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
     
