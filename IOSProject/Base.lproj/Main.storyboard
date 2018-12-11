@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -215,8 +215,8 @@
         <!--Poke-Center-->
         <scene sceneID="n9Z-IA-SKv">
             <objects>
-                <viewController title="Poke-Center" id="CFa-Vd-jpr" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="TMh-ee-QBq">
+                <viewController title="Poke-Center" id="CFa-Vd-jpr" customClass="PokeCenterViewController" customModule="IOSProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TMh-ee-QBq" customClass="poke">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -245,11 +245,19 @@
                                 <state key="normal" title="Heal">
                                     <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="healBtnPressed:" destination="CFa-Vd-jpr" eventType="touchUpInside" id="edY-es-cS8"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.72156862749999995" green="0.1529411765" blue="0.12549019610000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="eV4-3t-0NP"/>
                     </view>
+                    <connections>
+                        <outlet property="pokemonHP" destination="HBN-vC-fow" id="yLz-py-q9D"/>
+                        <outlet property="pokemonImage" destination="mjn-51-mee" id="2I4-mo-Ubi"/>
+                        <outlet property="pokemonName" destination="tP6-e0-vtd" id="Hdv-xc-VO3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="glW-Xc-Bj7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -358,35 +366,74 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mr1-NX-iwm">
-                                <rect key="frame" x="29" y="575" width="102" height="61"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TLk-fz-uk8">
+                                <rect key="frame" x="27" y="459" width="106" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="25"/>
-                                <state key="normal" title="Attack">
+                                <state key="normal" title="Attack1">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="attackBtnPressed:" destination="wg5-Tg-cpL" eventType="touchUpInside" id="mNq-1n-VAv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lll-vI-VQN">
+                                <rect key="frame" x="242" y="459" width="106" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="25"/>
+                                <state key="normal" title="Attack2">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="attackBtnPressed:" destination="wg5-Tg-cpL" eventType="touchUpInside" id="L5d-sq-SUX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oRz-WD-tIO">
+                                <rect key="frame" x="242" y="523" width="106" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="25"/>
+                                <state key="normal" title="Attack4">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="attackBtnPressed:" destination="wg5-Tg-cpL" eventType="touchUpInside" id="N56-z0-I4A"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cn6-6z-MvV">
+                                <rect key="frame" x="27" y="523" width="106" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="25"/>
+                                <state key="normal" title="Attack3">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="attackBtnPressed:" destination="wg5-Tg-cpL" eventType="touchUpInside" id="WO6-cf-sn6"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lEf-Hp-Qs4">
-                                <rect key="frame" x="244" y="575" width="102" height="61"/>
+                                <rect key="frame" x="137" y="586" width="102" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="25"/>
                                 <state key="normal" title="RUN!">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="runBtnPressed:" destination="wg5-Tg-cpL" eventType="touchUpInside" id="Nby-A8-yk8"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HP  30/30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibd-R3-bqu">
-                                <rect key="frame" x="167" y="506" width="192" height="31"/>
+                                <rect key="frame" x="167" y="409" width="192" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="23"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="squirtle" translatesAutoresizingMaskIntoConstraints="NO" id="SbF-hb-eWN">
-                                <rect key="frame" x="16" y="409" width="128" height="128"/>
+                                <rect key="frame" x="16" y="312" width="128" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dtB-Ee-Z0R">
-                                <rect key="frame" x="167" y="466" width="192" height="32"/>
+                                <rect key="frame" x="167" y="369" width="192" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="24"/>
                                 <nil key="textColor"/>
@@ -396,6 +443,14 @@
                         <color key="backgroundColor" red="0.67898126639559298" green="1" blue="0.99685487931193884" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="xeY-sy-lgy"/>
                     </view>
+                    <connections>
+                        <outlet property="enemyHP" destination="CdF-PR-08R" id="xlA-Zj-onk"/>
+                        <outlet property="enemyImage" destination="gAR-DC-gUL" id="H4Q-RT-mBl"/>
+                        <outlet property="enemyName" destination="MXI-uX-C69" id="ZL8-nt-Cwb"/>
+                        <outlet property="userPokeHP" destination="ibd-R3-bqu" id="VTY-co-CM8"/>
+                        <outlet property="userPokeImage" destination="SbF-hb-eWN" id="3rG-pC-4Aa"/>
+                        <outlet property="userPokeName" destination="dtB-Ee-Z0R" id="IK5-7t-ahj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VKa-Wj-k7g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -612,13 +667,13 @@
     </scenes>
     <resources>
         <image name="bag" width="512" height="512"/>
-        <image name="bullbasaur" width="102.40000152587891" height="102.40000152587891"/>
-        <image name="charmander" width="102.11634063720703" height="102.11634063720703"/>
-        <image name="exit" width="409.60000610351562" height="409.60000610351562"/>
+        <image name="bullbasaur" width="512" height="512"/>
+        <image name="charmander" width="512" height="512"/>
+        <image name="exit" width="512" height="512"/>
         <image name="map" width="500" height="371"/>
-        <image name="party" width="409.60000610351562" height="409.60000610351562"/>
-        <image name="save" width="37.616325378417969" height="37.616325378417969"/>
-        <image name="squirtle" width="102.11634063720703" height="102.11634063720703"/>
+        <image name="party" width="512" height="512"/>
+        <image name="save" width="512" height="512"/>
+        <image name="squirtle" width="512" height="512"/>
         <image name="title" width="1200" height="442"/>
     </resources>
     <inferredMetricsTieBreakers>

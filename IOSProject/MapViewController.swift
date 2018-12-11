@@ -10,6 +10,37 @@ import UIKit
 
 class MapViewController: UIViewController {
 
+    //MARK: Outlets
+    @IBOutlet weak var enemyName: UILabel!
+    @IBOutlet weak var enemyHP: UILabel!
+    @IBOutlet weak var enemyImage: UIImageView!
+    @IBOutlet weak var userPokeName: UILabel!
+    @IBOutlet weak var userPokeHP: UILabel!
+    @IBOutlet weak var userPokeImage: UIImageView!
+    
+    //MARK: Actions
+    @IBAction func attackBtnPressed(_ sender: Any) {
+        
+    }
+    
+    @IBAction func runBtnPressed(_ sender: Any) {
+        let popup = UIAlertController(title: "RUN!", message: "Are you sure you wish to run away?", preferredStyle: .alert)
+        let stayButton = UIAlertAction(title: "Stay", style: .default, handler: nil)
+        let runButton = UIAlertAction(title: "Run!", style: .default, handler: {
+            // mandatory line for creating a closure in swift
+            action in
+            
+            
+            
+        })
+        
+        popup.addAction(runButton)
+        popup.addAction(stayButton)
+        
+        // 4. Show the alert box!
+        present(popup, animated:true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

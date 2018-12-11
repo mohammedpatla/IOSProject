@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D1B337C21C01C4F00AE863D /* PokeCenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1B337B21C01C4F00AE863D /* PokeCenterViewController.swift */; };
 		452CAA9821BB8F0200FD8B51 /* SelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452CAA9721BB8F0200FD8B51 /* SelectionViewController.swift */; };
 		45376EB821B98F79007F9EF8 /* PartyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45376EB721B98F79007F9EF8 /* PartyViewController.swift */; };
 		4537E96321B9BF1100F32860 /* CustomViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4537E96221B9BF1100F32860 /* CustomViewCell.swift */; };
@@ -55,6 +56,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0D1B337B21C01C4F00AE863D /* PokeCenterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeCenterViewController.swift; sourceTree = "<group>"; };
 		2CD11E087075F2B3CBB3B614 /* Pods-IOSProjectUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOSProjectUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IOSProjectUITests/Pods-IOSProjectUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		452CAA9721BB8F0200FD8B51 /* SelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionViewController.swift; sourceTree = "<group>"; };
 		45376EB721B98F79007F9EF8 /* PartyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyViewController.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				D61F7DE021ADBCE800708585 /* AppDelegate.swift */,
 				D61F7DE221ADBCE800708585 /* ViewController.swift */,
 				D61F7DE421ADBCE800708585 /* Main.storyboard */,
+				0D1B337B21C01C4F00AE863D /* PokeCenterViewController.swift */,
 				45376EB721B98F79007F9EF8 /* PartyViewController.swift */,
 				4577787021B6E65C0014D1B0 /* MainViewController.swift */,
 				4577786E21B6E62D0014D1B0 /* MapViewController.swift */,
@@ -455,6 +458,7 @@
 				4537E96321B9BF1100F32860 /* CustomViewCell.swift in Sources */,
 				D61F7DE921ADBCE800708585 /* IOSProject.xcdatamodeld in Sources */,
 				D61F7DE121ADBCE800708585 /* AppDelegate.swift in Sources */,
+				0D1B337C21C01C4F00AE863D /* PokeCenterViewController.swift in Sources */,
 				452CAA9821BB8F0200FD8B51 /* SelectionViewController.swift in Sources */,
 				4577786F21B6E62D0014D1B0 /* MapViewController.swift in Sources */,
 				4577787121B6E65C0014D1B0 /* MainViewController.swift in Sources */,
