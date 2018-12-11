@@ -15,9 +15,12 @@ class PokeCenterViewController: UIViewController {
     @IBOutlet weak var pokemonHP: UILabel!
     @IBOutlet weak var pokemonImage: UIImageView!
     
+    var healValue : Int = 30
     
     //MARK: Actions
     @IBAction func healBtnPressed(_ sender: Any) {
+        // Just for testing
+        pokemonHP.text = "30/30"
         
     }
     
