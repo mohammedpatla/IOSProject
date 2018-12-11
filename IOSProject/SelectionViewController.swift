@@ -73,13 +73,16 @@ class SelectionViewController: UIViewController {
             "pokemonValue":pokeSelectionVal
             ])
         
-        
+        self.performSegue(withIdentifier: "segueC", sender: nil)
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
-        if pokeSelectionVal != -1 && segue.identifier == "segueA"{
-            let pokeVal = segue.destination as! MainViewController
+        
+        //No need to perform this anymore as we just call it from on Button Press as data is loaded automatically from Firebase.
+        /*if pokeSelectionVal != -1 && segue.identifier == "segueC"{
+            let pokeVal = segue.destination as! UINavigationController
             pokeVal.pokemonValue = pokeSelectionVal
-        }
+        }*/
     }
     
     // Actions for tapping the faces

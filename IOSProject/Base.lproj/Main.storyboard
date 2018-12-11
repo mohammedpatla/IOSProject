@@ -577,7 +577,6 @@
                                 </state>
                                 <connections>
                                     <action selector="onGoPressed:" destination="WGx-W6-HhN" eventType="touchUpInside" id="AHT-gJ-dfC"/>
-                                    <segue destination="2Eg-bc-0pq" kind="show" identifier="segueA" id="nLX-rM-80p"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -588,6 +587,7 @@
                         <outlet property="bulbImg" destination="Ma2-g1-uf2" id="yLn-9O-vnN"/>
                         <outlet property="charImg" destination="6Fu-yR-zm4" id="gZM-rv-nnD"/>
                         <outlet property="sqrtImg" destination="6g8-p7-sFQ" id="vOQ-K9-ngL"/>
+                        <segue destination="aa4-TU-R0S" kind="show" identifier="segueC" id="d0w-Mc-WGO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GJZ-a6-V5f" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -607,7 +607,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1217" y="112"/>
+            <point key="canvasLocation" x="33" y="197"/>
         </scene>
     </scenes>
     <resources>
@@ -622,7 +622,7 @@
         <image name="title" width="1200" height="442"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="d0w-Mc-WGO"/>
         <segue reference="LTx-oy-eSq"/>
-        <segue reference="nLX-rM-80p"/>
     </inferredMetricsTieBreakers>
 </document>
