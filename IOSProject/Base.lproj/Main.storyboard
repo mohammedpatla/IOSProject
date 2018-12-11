@@ -450,6 +450,7 @@
                         <outlet property="userPokeHP" destination="ibd-R3-bqu" id="VTY-co-CM8"/>
                         <outlet property="userPokeImage" destination="SbF-hb-eWN" id="3rG-pC-4Aa"/>
                         <outlet property="userPokeName" destination="dtB-Ee-Z0R" id="IK5-7t-ahj"/>
+                        <segue destination="2Eg-bc-0pq" kind="show" identifier="runSegue" id="bZg-CN-Tfz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VKa-Wj-k7g" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -679,5 +680,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="d0w-Mc-WGO"/>
         <segue reference="LTx-oy-eSq"/>
+        <segue reference="bZg-CN-Tfz"/>
     </inferredMetricsTieBreakers>
 </document>

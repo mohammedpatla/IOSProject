@@ -169,6 +169,8 @@ class MainViewController: UIViewController {
         if(exitHint.state == .ended){
             exitButton.isHidden = true
         }
+        
+        self.dismiss(animated: true, completion: nil)
     }
     
 }

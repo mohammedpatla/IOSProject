@@ -23,15 +23,15 @@ class MapViewController: UIViewController {
         
     }
     
+    //RUN AWAY!
     @IBAction func runBtnPressed(_ sender: Any) {
         let popup = UIAlertController(title: "RUN!", message: "Are you sure you wish to run away?", preferredStyle: .alert)
         let stayButton = UIAlertAction(title: "Stay", style: .default, handler: nil)
         let runButton = UIAlertAction(title: "Run!", style: .default, handler: {
             // mandatory line for creating a closure in swift
             action in
-            
-            
-            
+            self.dismiss(animated: true, completion: nil)
+            //self.performSegue(withIdentifier: "runSegue", sender: nil)
         })
         
         popup.addAction(runButton)
@@ -58,8 +58,9 @@ class MapViewController: UIViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        // 3.  If matching, then
+        //          --> set the data for the next screen
+        let menuPage = segue.destination as! MainViewController
     }
     */
 
