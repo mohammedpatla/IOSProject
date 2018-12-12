@@ -133,6 +133,11 @@ class MainViewController: UIViewController {
             // Do map stuff
             
         }
+        if segue.identifier == "pokeCenterSegue"{
+            //Passing the Pokemon object to the Poke-Center View
+            let pokeCenterViewController = segue.destination as! PokeCenterViewController
+            pokeCenterViewController.pokemon = pokemon
+        }
         
         
     }

@@ -2,14 +2,16 @@
 //  PokeCenterViewController.swift
 //  IOSProject
 //
-//  Created by Alexander Blankenstein on 12/11/18.
+//  Created by Kenneth Uyabeme on 12/11/18.
 //  Copyright © 2018 Mohammed Patla. All rights reserved.
 //
 
 import UIKit
 
 class PokeCenterViewController: UIViewController {
-
+    //MARK: Variables
+    var pokemon: Pokemon!
+    
     //MARK: Outlets
     @IBOutlet weak var pokemonName: UILabel!
     @IBOutlet weak var pokemonHP: UILabel!
@@ -22,13 +24,28 @@ class PokeCenterViewController: UIViewController {
         // Just for testing
         pokemonHP.text = "30/30"
         
+        //Pokemon object does not have a health value, need to add this
+        
+        //Pop up to indicate that the Pokemon is now healed
+        let healthPopUp = UIAlertController(title: "Squirtle has been healed", message: "HP: \(healValue)", preferredStyle: .alert)
+        let okButton = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        healthPopUp.addAction(okButton)
+        present(healthPopUp, animated: true)
+      
+        
+        
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        // Updating the view labels with the pokemon's info
+       //pokemonName.text = pokemon.name
+        pokemonName.text = "Squirtle"
+        
+        // ***Code to update the pokemon image will go here***
+        
+        //------------------------------------------------
     }
 
     override func didReceiveMemoryWarning() {

@@ -117,7 +117,7 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="CFa-Vd-jpr" kind="show" id="0hk-9l-opu"/>
+                                    <segue destination="CFa-Vd-jpr" kind="show" identifier="pokeCenterSegue" id="0hk-9l-opu"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xgy-nB-ANK">
@@ -232,7 +232,7 @@
                                 <rect key="frame" x="67" y="120" width="240" height="240"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pokemon Name Here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tP6-e0-vtd">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pokemon Name Here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tP6-e0-vtd">
                                 <rect key="frame" x="75" y="379" width="225" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="22"/>
@@ -685,7 +685,7 @@
         <image name="title" width="1200" height="442"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="uel-fJ-Rst"/>
+        <segue reference="d0w-Mc-WGO"/>
         <segue reference="xrh-3Q-fCl"/>
     </inferredMetricsTieBreakers>
 </document>
