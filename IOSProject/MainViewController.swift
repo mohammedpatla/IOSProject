@@ -37,7 +37,8 @@ class MainViewController: UIViewController {
     // Pokemon Value
     var pokemonValue = -1
     
-    var context: NSManagedObjectContext!
+    //Moved to SelectionView
+    //var context: NSManagedObjectContext!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,6 +73,7 @@ class MainViewController: UIViewController {
                         let data = document;
                         print(data["pokemonValue"])
                         self.pokemonValue = data["pokemonValue"] as! Int
+                        self.jsonResult = data["pokemonlist"] as AnyObject
                         print(self.pokemonValue)
                     }
                 }
@@ -80,6 +82,8 @@ class MainViewController: UIViewController {
 
         print("Poke value \(self.pokemonValue)")
 
+        //Moved to Selection controller
+        /*
         // Do any additional setup after loading the view.
         let url = URL(string: "https://pokeapi.co/api/v2/pokemon/7")
         let task = URLSession.shared.dataTask(with: url!){(data, response, error) in
@@ -103,6 +107,7 @@ class MainViewController: UIViewController {
         
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
         context = appDelegate.persistentContainer.viewContext
+        */
         
     }
 

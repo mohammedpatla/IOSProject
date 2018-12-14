@@ -16,6 +16,7 @@ class MapViewController: UIViewController {
     var enStartHP = 0
     var userStartHP = 0
     var miss = (arc4random() % 100)
+    var serverName = ""
     
     //MARK: Outlets
     @IBOutlet weak var enemyName: UILabel!
@@ -240,6 +241,22 @@ class MapViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // 1. Create an alert box object (and configure it)
+        let popup = UIAlertController(title: "Server Name.", message: "Please enter the server name below.", preferredStyle: .alert)
+        
+        
+        // 2. Add a text box!!!!
+        popup.addTextField()
+        
+        let cancelButton = UIAlertAction(title: "Cancel", style: .default, handler: nil)  // creating & configuring the button
+        let saveButton = UIAlertAction(title: "Save", style: .default, handler: {
+            // mandatory line for creating a closure in swift
+            action in
+            
+            // code for what should happen when you click the button
+            let serverName = popup.textFields?[0].text
+        })
 
         enStartHP = enHP
         userStartHP = userHP
