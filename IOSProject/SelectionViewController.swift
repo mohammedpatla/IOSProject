@@ -12,7 +12,7 @@ import FirebaseAuth
 import WebKit
 import CoreData
 
-class SelectionViewController: UIViewController {
+class SelectionViewController: UIViewController{
 
     //MARK: Images
     @IBOutlet weak var bulbImg: UIImageView!
@@ -38,11 +38,17 @@ class SelectionViewController: UIViewController {
     var context: NSManagedObjectContext!
     
     //List of Pokemons the user has
-    var pokemonUserList = [Pokemon]()
+    //var pokemonUserList = [Pokemon]()
     //var pokemonUserListObject: AnyObject? = nil
+    //JSON object to store the
+    //var pokemonJSONObject:AnyObject? = nil
     
     //MARK: UserSelection
     var pokeSelectionVal = -1
+    //var userPokemon = Pokemon()
+    
+    //let jsonObject: NSMutableDictionary = NSMutableDictionary()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,7 +66,7 @@ class SelectionViewController: UIViewController {
                         //jsonResult = jsonResult
                         //var top10 = jsonResult.sort(function(a, b) { return results.Variable1 < b.Variable1 ? 1 : -1; })
                             //.slice(0, 10);
-                        print(self.jsonResult)
+                        //print(self.jsonResult)
                         //commented out
                         //print("You picked \(self.jsonResult!["name"]!)")
                     }
@@ -77,6 +83,7 @@ class SelectionViewController: UIViewController {
 
         // ----------------------------------------------------------------------------------------------------
         // Do any additional setup after loading the view.
+        
         //Get user Variable
         let currentUser = Auth.auth().currentUser
         
@@ -107,22 +114,42 @@ class SelectionViewController: UIViewController {
     
     @IBAction func onGoPressed(_ sender: Any) {
         
-        /*
-        var userPokemon:Pokemon
-        
-        userPokemon.level = 0;
-        userPokemon.name = "You do Not have a name"
-        userPokemon.health = 0
-        userPokemon.kind = Double(pokeSelectionVal)
+        //userPokemon.level = Int32(0)
+        //print("\(userPokemon.level)")
+        //userPokemon.name = userEmail
+        //userPokemon.health = Int32(0)
+        //userPokemon.kind = Double(pokeSelectionVal)
         //userPokemon.movesURL =
-        pokemonUserList.append(userPokemon)
-        */
+        //pokemonUserList.append(userPokemon)
+ 
         
-        // PARSING TO JSON OBJ
+
+        //Abandoned work as parsing JSON is a pain and
+        /*
+        
+        jsonObject.setValue(userPokemon.level, forKey: "level")
+        jsonObject.setValue(userPokemon.name, forKey: "name")
+        jsonObject.setValue(userPokemon.health, forKey: "health")
+        jsonObject.setValue(userPokemon.kind, forKey: "kind")
+        //jsonObject.setValue(value5, forKey: "r")
+        
+        let jsonData: NSData
+        
+        do {
+            jsonData = try JSONSerialization.data(withJSONObject: jsonObject, options: JSONSerialization.WritingOptions()) as NSData
+            let jsonString = NSString(data: jsonData as Data, encoding: String.Encoding.utf8.rawValue)! as String
+            print("json string = \(jsonString)")
+            
+        } catch _ {
+            print ("JSON Failure")
+        }
+        
+        //PARSING TO JSON OBJ
         /*
         //Parse into Json Object
+         if let pokeball = pokemonUserList {
             do{
-                self.pokemonUserListObject = try JSONSerialization.jsonObject(with: pokemonUserList, options: JSONSerialization.ReadingOptions.mutableContainers) as AnyObject
+                self.pokemonJSONObject = try JSONSerialization.jsonObject(with: pokeball, options: JSONSerialization.ReadingOptions.mutableContainers) as AnyObject
                 //jsonResult = jsonResult
                 //var top10 = jsonResult.sort(function(a, b) { return results.Variable1 < b.Variable1 ? 1 : -1; })
                 //.slice(0, 10);
@@ -132,14 +159,20 @@ class SelectionViewController: UIViewController {
             }
             catch{
                 print("Something failed")
-            }*/
-        
+            }
+        }*/
+ 
+         */
         
         db.collection("userPokemons").document(userEmail).setData([
             //"userID": String(userEmail),
-            "pokemonValue":pokemonUserList,
-            "pokemonList": pokemonUserList
+            "pokemonKind":pokeSelectionVal,
+            "pokemonHealth": 30,
+            "pokemonLevel": 0,
+            "pokemonName": userEmail,
+            "pokemonList": jsonResult
             ])
+        print("-----break point    \(pokeSelectionVal)")
         
         self.performSegue(withIdentifier: "segueC", sender: nil)
     }

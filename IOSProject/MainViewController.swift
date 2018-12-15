@@ -25,7 +25,7 @@ class MainViewController: UIViewController {
     @IBOutlet var exitHint: UILongPressGestureRecognizer!
     
     var jsonResult: AnyObject? = nil
-    var pokemon: Pokemon!
+    var pokemon = Pokemon()
     
     //Current user
     var userEmail:String = ""
@@ -34,8 +34,12 @@ class MainViewController: UIViewController {
     // ------------------------------------
     var db:Firestore!
     
-    // Pokemon Value
+    // Pokemon Values Used
     var pokemonValue = -1
+    var pokemonHealth = 0
+    var pokemonLevel = 0
+    var pokemonName = ""
+    //var pokemon
     
     //Moved to SelectionView
     //var context: NSManagedObjectContext!
@@ -72,9 +76,12 @@ class MainViewController: UIViewController {
                         // 1. Get one result from database
                         let data = document;
                         print(data["pokemonValue"])
-                        self.pokemonValue = data["pokemonValue"] as! Int
+                        self.pokemonName = data["pokemonName"] as! String
+                        self.pokemonHealth = data["pokemonHealth"] as! Int
+                        self.pokemonLevel = data["pokemonLevel"] as! Int
+                        self.pokemonValue = data["pokemonKind"] as! Int
                         self.jsonResult = data["pokemonlist"] as AnyObject
-                        print(self.pokemonValue)
+                        print("\(self.pokemonValue)")
                     }
                 }
             }
