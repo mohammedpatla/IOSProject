@@ -12,7 +12,9 @@ import Firebase
 import FirebaseAuth
 import WebKit
 
-class MainViewController: UIViewController {
+class MainViewController: UIViewController, DataEnteredDelegate {
+    
+    
 
     @IBOutlet weak var partyButton: UILabel!
     @IBOutlet weak var bagButton: UILabel!
@@ -47,6 +49,7 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //Get Current User
+        print("\(pokemonHealth)")
         let currentUser = Auth.auth().currentUser
         
         if (currentUser != nil) {
@@ -146,14 +149,21 @@ class MainViewController: UIViewController {
             
         }
         if segue.identifier == "pokeCenterSegue"{
-            //Passing the Pokemon object to the Poke-Center View
+            //Passing the Pokename name and health to the PokeCenter View
             let pokeCenterViewController = segue.destination as! PokeCenterViewController
-            pokeCenterViewController.pokemon = pokemon
+            pokeCenterViewController.pokemonName = pokemonName
+            pokeCenterViewController.pokemonHealth = pokemonHealth
+            
+            pokeCenterViewController.delegate = self
+            
         }
         
         
     }
-    
+    //This is for Poke-controller to update pokemonHealth on this view
+    func updateHealthAfterHealing(info: Int) {
+        pokemonHealth = info
+    }
     
 
     @IBAction func partyPressed(_ sender: Any) {

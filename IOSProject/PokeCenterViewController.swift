@@ -7,32 +7,36 @@
 //
 
 import UIKit
-
+// protocol used for sending data back to MainView controller
+protocol DataEnteredDelegate: class {
+    func updateHealthAfterHealing(info: Int)
+}
 class PokeCenterViewController: UIViewController {
     //MARK: Variables
     var pokemon: Pokemon!
+    var pokemonHealth = 0
+    var pokemonName = ""
+     var healValue : Int = 30
+    weak var delegate: DataEnteredDelegate? = nil
     
     //MARK: Outlets
-    @IBOutlet weak var pokemonName: UILabel!
+    @IBOutlet weak var pokemonNamelabel: UILabel!
     @IBOutlet weak var pokemonHP: UILabel!
     @IBOutlet weak var pokemonImage: UIImageView!
     
-    var healValue : Int = 30
+   
     
     //MARK: Actions
     @IBAction func healBtnPressed(_ sender: Any) {
-        // Just for testing
-        pokemonHP.text = "30/30"
-        
-        //Pokemon object does not have a health value, need to add this
-        
+        //healing Pokemon
+        pokemonHealth = pokemonHealth + healValue
+        //sending pokemon health value back to the Main View
+        delegate?.updateHealthAfterHealing(info: pokemonHealth)
         //Pop up to indicate that the Pokemon is now healed
-        let healthPopUp = UIAlertController(title: "Squirtle has been healed", message: "HP: \(healValue)", preferredStyle: .alert)
+        let healthPopUp = UIAlertController(title: "\(pokemonName) has been healed", message: "HP: \(pokemonHealth)", preferredStyle: .alert)
         let okButton = UIAlertAction(title: "Ok", style: .default, handler: nil)
         healthPopUp.addAction(okButton)
         present(healthPopUp, animated: true)
-      
-        
         
     }
     
@@ -40,8 +44,8 @@ class PokeCenterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Updating the view labels with the pokemon's info
-       //pokemonName.text = pokemon.name
-        pokemonName.text = "Squirtle"
+        pokemonNamelabel.text = pokemonName
+        pokemonHP.text = "\(pokemonHealth)"
         
         // ***Code to update the pokemon image will go here***
         
@@ -54,14 +58,12 @@ class PokeCenterViewController: UIViewController {
     }
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
     }
-    */
+   
 
 }
