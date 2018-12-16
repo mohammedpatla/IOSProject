@@ -244,20 +244,22 @@ class MapViewController: UIViewController {
         
         // 1. Create an alert box object (and configure it)
         let popup = UIAlertController(title: "Server Name.", message: "Please enter the server name below.", preferredStyle: .alert)
-        
-        
         // 2. Add a text box!!!!
         popup.addTextField()
-        
         let cancelButton = UIAlertAction(title: "Cancel", style: .default, handler: nil)  // creating & configuring the button
         let saveButton = UIAlertAction(title: "Save", style: .default, handler: {
             // mandatory line for creating a closure in swift
             action in
-            
             // code for what should happen when you click the button
-            let serverName = popup.textFields?[0].text
+            self.serverName = popup.textFields?[0].text ?? "DidNotConnect"
         })
 
+        popup.addAction(cancelButton)
+        popup.addAction(saveButton)
+        // 4. Show the alert box!
+        present(popup, animated:true)
+        
+        
         enStartHP = enHP
         userStartHP = userHP
         
