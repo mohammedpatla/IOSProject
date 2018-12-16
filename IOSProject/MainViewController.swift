@@ -81,7 +81,7 @@ class MainViewController: UIViewController {
                         self.pokemonLevel = data["pokemonLevel"] as! Int
                         self.pokemonValue = data["pokemonKind"] as! Int
                         self.jsonResult = data["pokemonlist"] as AnyObject
-                        print("\(self.pokemonValue)")
+                        print("\(self.pokemonHealth)")
                     }
                 }
             }
